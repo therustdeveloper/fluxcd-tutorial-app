@@ -1,0 +1,14 @@
+apiVersion: notification.toolkit.fluxcd.io/v1beta3
+kind: Alert
+metadata:
+  name: fluxalert
+  namespace: fluxcdtutorial
+spec:
+  summary: "Cluster addons impacted in us-east-2"
+  providerRef:
+    name: fluxgithubprovider
+  eventSeverity: info
+  eventSources:
+    - kind: Kustomization
+      name: 'fluxcd-tutorial-app'
+      namespace: fluxcdtutorial

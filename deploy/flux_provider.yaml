@@ -1,0 +1,11 @@
+apiVersion: notification.toolkit.fluxcd.io/v1beta3
+kind: Provider
+metadata:
+  name: fluxgithubprovider
+  namespace: fluxcdtutorial
+spec:
+  type: github
+  channel: general
+  address: https://github.com/therustdeveloper/flux-tutorial-app
+  secretRef:
+    name: github
