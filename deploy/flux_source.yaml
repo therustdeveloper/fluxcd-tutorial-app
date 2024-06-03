@@ -2,7 +2,7 @@
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
 metadata:
-  name: k8snginxappsot
+  name: fluxcd-tutorial-app
   namespace: fluxcdtutorial
 spec:
   interval: 30s
